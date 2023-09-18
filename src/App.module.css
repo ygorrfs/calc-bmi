@@ -1,0 +1,197 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  overflow-y: hidden;
+}
+
+.page {
+  background-color: #ffffff;
+  padding-left: 90px;
+  padding-right: 90px;
+  background-image: linear-gradient(to bottom right, #fff, #227c9d);
+  height: 100vh;
+}
+
+.pageHeader {
+  padding-top: 30px;
+  width: 100%;
+  height: 150px;
+}
+
+.pageHeader img {
+  width: 200px;
+  height: auto;
+}
+
+.pageBody {
+  display: flex;
+}
+
+.pageBodyLeft {
+  margin-right: 50px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pageBodyLeft input {
+  margin-top: 20px;
+  width: 100%;
+  height: 50px;
+  border: none;
+  border-bottom: 2px solid gray;
+  background-color: transparent;
+  outline: none;
+  cursor: auto;
+  font-size: large;
+}
+
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.pageBodyLeft input:disabled {
+  opacity: 0.5;
+}
+
+.pageBodyLeft h1 {
+  padding-bottom: 30px;
+}
+
+.pageBodyLeft p {
+  padding-bottom: 20px;
+  padding-top: 20px;
+  font-size: large;
+}
+
+.pageButton {
+  width: 100%;
+  margin-top: 60px;
+  transition: all ease 0.9s;
+}
+
+.pageButton :hover {
+  opacity: 0.9;
+}
+
+.pageButton:disabled {
+  opacity: 0.5;
+}
+
+.pageButtonCalc {
+  width: 100%;
+  height: 60px;
+  border-radius: 10px;
+  background-color: #227c9d;
+  cursor: pointer;
+  border: none;
+  font-size: large;
+  color: #fff;
+}
+
+.pageBodyRight {
+  margin-left: 50px;
+  flex: 1;
+  display: flex;
+}
+
+.grid {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.rightBig {
+  flex: 1;
+  display: flex;
+}
+
+.rightArrow {
+  position: absolute;
+  background-color: #227c9d;
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin-left: -35px;
+  margin-top: 228px;
+  transition: all ease 0.3s;
+}
+
+.rightArrow :hover {
+  opacity: 0.8;
+}
+
+@media screen and (max-width: 1024px) {
+  .pageBody {
+    flex-direction: column;
+  }
+  .pageBodyRight {
+    margin-top: 70px;
+    margin-left: 0px;
+  }
+  .pageBodyLeft {
+    margin-right: 0px;
+  }
+  .pageBodyLeft p {
+    text-align: justify;
+    font-size: 20px;
+  }
+  .pageButtonCalc {
+    height: 90px;
+    font-size: 30px;
+    font-weight: bold;
+    color: #fff;
+  }
+}
+
+@media screen and (max-width: 770px) {
+  header {
+    padding: 0px 20px;
+  }
+  .pageHeader {
+    height: 80px;
+  }
+  .pageBody {
+    padding: 0px;
+    flex-direction: column;
+  }
+  .pageBodyLeft {
+    margin-right: 0;
+  }
+  .pageBodyRight {
+    margin-left: 0;
+    margin-top: 50px;
+  }
+  .rightArrow {
+    margin-left: 0px;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .pageBodyRight {
+    grid-template-columns: 1fr;
+  }
+  .page {
+    padding: 0 35px;
+  }
+
+  .pageBodyLeft h1 {
+    padding-bottom: 0px;
+  }
+  .pageBodyLeft p {
+    padding-bottom: 0px;
+    font-size: 20px;
+    text-align: justify;
+    padding-top: 0px;
+  }
+}
